@@ -1,0 +1,307 @@
+header h1{
+    margin: 0%;
+    padding: 20px;
+    background-color: #505050;
+    color: white;
+    text-align: center;
+}
+footer h1{
+    position: sticky;
+    padding: 10px;
+    color:white;
+    background-color: black;
+    text-align: center;
+    font-size: small;
+    display: block;
+    bottom: 0%;
+    
+}
+#navigate{
+    position: sticky;
+    z-index: 1;
+    top: 0%;
+}
+.menu{
+    margin: 0%;
+    background-color: rgba(0, 0, 0, 0.502);
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.menu li{
+    display: inline-block;
+    padding: 10px;
+}
+.menu li:hover{
+    background-color: rgb(0, 0, 0, 0.7);
+}
+.menu li:nth-child(2):hover #drop1 , .menu li:nth-child(3):hover #drop2{
+    display: block;
+}
+
+#drop1 , #drop2{
+    position: absolute;
+    width: auto;
+    max-width: 130px;
+    display: none;
+    background-color: whitesmoke;
+    top: 42px;
+    padding: 10px;
+    border-radius: 6%;
+}
+#drop1 li, #drop2 li{
+    display: block;
+}
+#drop1 li:hover, #drop2 li:hover{
+    background-color: gainsboro;
+}
+
+#drop1 li a , #drop2 li a{
+    background-color: steelblue;
+    font-size: 16px;
+}
+
+.brands-container {
+    /* all pictures should be the same size as this value. */
+    max-width: 100%;
+    margin: auto;
+    padding:0 1em;
+    overflow: hidden;
+    border: 2px solid steelblue;
+  }
+  
+  .brands-carousel {
+    position: relative;
+    padding-left: 0;
+    margin: 0;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .brands-carousel > div {
+    width: 100%;
+  }
+
+  .brands-carousel > picture {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    animation: carousel 20s linear infinite;
+  
+    /* It also starts off the screen until it is time. */
+    transform: translateX(100%);
+  }
+
+  .brands-carousel > picture:nth-child(1) {
+    animation-name: first-picture, carousel;
+    animation-duration: 20s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 20s;
+    transform: translateX(0%);
+  }
+  .brands-carousel > picture:nth-child(2) {
+    animation-delay: Calc(20s * .25);
+  }
+  .brands-carousel > picture:nth-child(3) {
+    animation-delay: Calc(20s * .50);
+  }
+  .brands-carousel > picture:nth-child(4) {
+    animation-delay: Calc(20s * .75);
+  }
+  /* .brands-carousel > picture:nth-child(5) {
+    animation-delay: Calc(20s * .99);
+  } */
+
+  /* The keyframes for desktop */
+@keyframes first-picture {
+    0% { transform: translateX(0%); }
+    7.5%, 33% { transform: translateX(0); }
+    40.5%, 100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes carousel {
+    0% { transform: translateX(100%); }
+    7.5%, 33% { transform: translateX(0); }
+    40.5%, 100% { transform: translateX(-100%); }
+  }
+
+  @keyframes first-picture-responsive {
+    0% { transform: translateX(0%); }
+    5.5%, 25% { transform: translateX(0); }
+    30.5%, 100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes carousel-responsive {
+    0% { transform: translateX(100%); }
+    5.5%, 25% { transform: translateX(0); }
+    30.5%, 100% { transform: translateX(-100%); }
+  }
+
+  .brands-carousel > picture:last-child {
+    display: none;
+  }
+
+  @media screen and (max-width: 1920px) {
+    .brands-carousel > picture {
+      animation: carousel-responsive 27s linear infinite;
+    }
+  
+    .brands-carousel > picture:nth-child(1) {
+      animation-name: first-picture-responsive, carousel-responsive;
+      animation-duration: 27s;
+      animation-iteration-count: 1, infinite;
+      animation-delay: 0s, 27s;
+    }
+  
+    .brands-carousel > picture:nth-child(2) {
+      animation-delay: Calc(27s * .25);
+    }
+    .brands-carousel > picture:nth-child(3) {
+      animation-delay: Calc(27s * .50);
+    }
+    .brands-carousel > picture:nth-child(3) {
+        animation-delay: Calc(27s * .75);
+      }
+    /* .brands-carousel > picture:nth-child(4) {
+      animation-delay: Calc(27s * .100);
+      
+    } */
+  }
+
+  /* # Updating all the 20s => 23.5s */
+@keyframes carousel {
+    0% { transform: translateX(100%); }
+    6.4%, 33% { transform: translateX(0); }
+    39.4%, 100% { transform: translateX(-100%); }
+  }
+
+  /*covid scction */
+.block{
+  padding-bottom: 10px;
+}
+#wow{
+  background-color: white;
+}
+#abc{
+  
+  font-size: 35px;
+}
+
+  .grid-container{
+    position: inherit;
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     grid-gap: 1%;
+  }
+@media only screen and (max-width:600px){
+   .a{
+    content:"too Short";
+    animation: shake-animation 1s ease infinite;
+    transform-origin: 50% 50%;
+
+   }
+   @keyframes shake-animation {
+    0% {transform: translate(0,0)}
+    1.78571%{transform: translate(10px,0)}
+    3.57143%{transform: translate(5px,0)}
+    5.35714%{transform: translate(0,0)}
+    7.14286%{transform: translate(10px,0)}
+    8.92857%{transform: translate(5px,0)}
+    10.71429%{transform: translate(0,0)}
+    100%{transform: translate(10px,0)}
+   }
+}
+  .a{
+    background-color: #f3f3fd;
+    /* width: 260px;
+    height: 350px; */
+/* this is new */
+    width: 80%;
+    height: 100%;
+/* till here */
+    box-shadow: 5px 10px #e2e2e1;
+    text-align: center;
+    padding-left: 3px;
+  }
+  @media only screen and (max-width:600px){
+    .a{
+      background-color: #f3f3fd;
+      /* width: 260px;
+      height: 350px; */
+  /* this is new */
+      max-width: 300px;
+      height: auto;
+  /* till here */
+      box-shadow: 5px 10px #e2e2e1;
+      text-align: center;
+      padding-left: 3px;
+    }
+  }
+  .c{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  button{
+    background-color: #bdc7f4;
+    border: 1px solid steelblue;
+    color:#f7a956 ;
+    text-decoration: none;
+    display: inline;
+    font-size: 19px;
+    width: 100%;
+    border-radius: 9px;
+    font-weight: bold;
+  }
+  button:active{
+    background-color: rgb(250, 234, 230);
+    border: rgb(0, 255, 76);
+  }
+  /* .button:visited{
+    background-color: rgb(250, 234, 230);
+    border: rgb(0, 255, 76);
+  } */
+
+  .a>p{
+    text-align: left;
+    color: #6988e5;
+    font-weight: bold;
+  }
+  @media only screen and (max-width:600px) {
+    .a>p{
+      text-align: left;
+      left: 20%;
+      color: #6988e5;
+      font-weight: bold;
+    }
+    
+  }
+
+  .a:nth-child(1):hover,.a:nth-child(2):hover,.a:nth-child(3):hover,.a:nth-child(4):hover{
+    /* width: 310px;
+    height:380px; */
+/* from; */
+    width: 100%;
+    height:105%;
+
+/* till */
+    background-color: #f3f3fd;
+    box-shadow: 5px 10px #858582;
+  }
+
+  #wow{
+    margin: auto;
+    /* padding: 40px; */
+    /* this */
+    padding: 5%;
+  }
+  /* #d1:hover,#d2:hover,#d3:hover,#d4:hover{
+    width: 290px;
+    height:325px;
+  } */
+  

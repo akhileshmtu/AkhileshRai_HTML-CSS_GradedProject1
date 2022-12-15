@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <title>gmail account</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <section class="block">
+
+        <div class="block1">
+            <form action="" id="lab-form">
+                <div id="frm">
+                <h1>1.Your Contact Details</h1>
+
+                <input type="text" class="in" title="name" placeholder="Full Name" required>
+
+                <input type="text" class="in" title="Patient" placeholder="Patient Id is exist"
+                    required>
+                <br>
+                <input type="email" title="Contact no" class="in" placeholder="Contact number" required>
+                <input type="email" title="email" class="in" placeholder="Email id" required>
+
+                <h2>2.Address</h2>
+                <input type="text" title="house no" class="in" placeholder="H-No" required>
+                <input type="text" title="street" class="in" placeholder="street" required>
+                <br>
+                <input type="text" title="area" class="in" placeholder="Area" required>
+                <h4>District</h4>
+                <select name="dist" id="dist">
+                    <option value="Choose">Choose</option>
+                    <option value="Choose">Nagpur</option>
+                    <option value="Choose">something</option>
+                </select>
+                <h2>3.Choose the Test type</h2>
+                <h3>Click atleast one</h3>
+                <br>
+                <input type="checkbox" name="cbc" value="yes"><label for="cbc">CBC</label><br>
+                <input type="checkbox" name="cu" value="yes">Complete Urine<br>
+                <input type="checkbox" name="lp" value="yes">Lipid Profile<br>
+                <input type="checkbox" name="tsh" value="yes">Thyroid Stimulating Hormone<br>
+                <input type="checkbox" name="gs" value="yes">Glucose Test<br>
+
+                <h2>4.Do you want a hard copy of the repost also?</h2>
+                <input type="radio" id="yes" name="hard" value="yes">yes<br>
+                <input type="radio" id="no" name="hard" value="no">No<br>
+
+                <h2>5.Select Your Comfortable Date and Time</h2>
+                <input type="datetime-local" id="daily" name="daily">
+                </div>
+
+                <div class="image">
+                    <img id="iii" src="Images\Lab-Test\lab-test.jpg">
+                </div>
+            </form>
+            <div class="under">
+                <button>Reset</button>
+            </div>
+            <div class="under1"> 
+                <button> Submit</button>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
